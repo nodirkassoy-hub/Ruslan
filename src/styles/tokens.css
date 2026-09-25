@@ -1,0 +1,88 @@
+/* ============================================================================
+   BALANS AI — DESIGN TOKENS
+   Dark corporate presentation mode. Restrained blue/cyan fintech palette.
+   ========================================================================== */
+
+:root {
+  /* ---- surfaces ------------------------------------------------------- */
+  --bg-0: #04070e;
+  --bg-1: #070c17;
+  --bg-2: #0b1220;
+  --bg-elev: #101a2c;
+
+  /* ---- ink ------------------------------------------------------------ */
+  --ink: #f4f8ff;
+  --ink-dim: rgba(232, 240, 255, 0.74);
+  --ink-mute: rgba(196, 212, 240, 0.52);
+  --ink-faint: rgba(170, 190, 225, 0.34);
+
+  /* ---- accent --------------------------------------------------------- */
+  --accent: #5ad8ff;
+  --accent-2: #3b82f6;
+  --accent-3: #8b5cf6;
+  --accent-soft: rgba(90, 216, 255, 0.14);
+  --accent-line: rgba(90, 216, 255, 0.34);
+
+  --ok: #35d6a0;
+  --warn: #f7b955;
+  --risk: #fb7185;
+  --info: #67b6ff;
+
+  /* ---- lines & glass -------------------------------------------------- */
+  --line: rgba(255, 255, 255, 0.085);
+  --line-2: rgba(255, 255, 255, 0.14);
+  --line-3: rgba(255, 255, 255, 0.22);
+  --glass: linear-gradient(157deg, rgba(255, 255, 255, 0.068) 0%, rgba(255, 255, 255, 0.022) 46%, rgba(255, 255, 255, 0.012) 100%);
+  --glass-2: linear-gradient(157deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.03) 100%);
+  --glass-dark: linear-gradient(157deg, rgba(14, 22, 38, 0.78) 0%, rgba(9, 14, 26, 0.62) 100%);
+  --blur: 18px;
+
+  /* ---- shadows -------------------------------------------------------- */
+  --sh-1: 0 1px 0 0 rgba(255, 255, 255, 0.05) inset, 0 18px 50px -22px rgba(0, 0, 0, 0.9);
+  --sh-2: 0 1px 0 0 rgba(255, 255, 255, 0.07) inset, 0 34px 90px -30px rgba(0, 0, 0, 0.95);
+  --sh-glow: 0 0 0 1px rgba(90, 216, 255, 0.22), 0 20px 60px -24px rgba(59, 130, 246, 0.6);
+
+  /* ---- radii ---------------------------------------------------------- */
+  --r-xs: 8px;
+  --r-sm: 11px;
+  --r-md: 15px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+  --r-pill: 999px;
+
+  /* ---- motion --------------------------------------------------------- */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --t-fast: 200ms;
+  --t: 320ms;
+  --t-slow: 560ms;
+
+  /* ---- deck chrome ---------------------------------------------------- */
+  --chrome: 0.9;
+  --slide-max: 1340px;
+  --pad-x: clamp(18px, 3.4vw, 64px);
+  --pad-y: clamp(56px, 6.4vh, 96px);
+  /* clears the fixed brand bar; the bottom pad also clears the nav bar */
+  --slide-pad-top: max(calc(var(--pad-y) * 0.78), 74px);
+
+  /* ---- type scale (fluid with viewport) -------------------------------- */
+  --f-mega: clamp(2.1rem, 5.6vw, 5.1rem);
+  --f-h1: clamp(1.75rem, 3.5vw, 3.3rem);
+  --f-h2: clamp(1.28rem, 1.95vw, 2.05rem);
+  --f-h3: clamp(1rem, 1.12vw, 1.2rem);
+  --f-body: clamp(0.83rem, 0.78vw, 0.98rem);
+  --f-sm: clamp(0.74rem, 0.68vw, 0.85rem);
+  --f-xs: clamp(0.66rem, 0.6vw, 0.75rem);
+  --f-label: clamp(0.6rem, 0.56vw, 0.7rem);
+}
+
+/* Presentation-grade light surfaces are intentionally not offered:
+   the deck is designed and QA'd in dark mode only. */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --t-fast: 1ms;
+    --t: 1ms;
+    --t-slow: 1ms;
+  }
+}
