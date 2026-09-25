@@ -1,4 +1,18 @@
-import { AlertTriangle, FileSpreadsheet, MessageSquare, MinusCircle, Scissors } from 'lucide-react'
+import {
+  AlertTriangle,
+  Calculator,
+  Factory,
+  FileSpreadsheet,
+  FileText,
+  Landmark,
+  MessageSquare,
+  MinusCircle,
+  Package,
+  Scissors,
+  UserCog,
+  Users,
+  type LucideIcon,
+} from 'lucide-react'
 import { useDeck } from '../deck/DeckContext'
 import { EASE, Reveal } from '../components/Primitives'
 import { motion } from 'framer-motion'
@@ -8,7 +22,18 @@ import { motion } from 'framer-motion'
    Disconnected systems, slow answers, scattered information.
    ========================================================================== */
 
-const TOOL_ICONS = [FileSpreadsheet, FileSpreadsheet, MessageSquare, FileSpreadsheet, FileSpreadsheet, FileSpreadsheet, FileSpreadsheet, FileSpreadsheet, FileSpreadsheet]
+/* One recognisable glyph per disconnected system, in the order of s.tools. */
+const TOOL_ICONS: LucideIcon[] = [
+  Calculator,
+  FileSpreadsheet,
+  MessageSquare,
+  Package,
+  Landmark,
+  Users,
+  Factory,
+  UserCog,
+  FileText,
+]
 
 export default function Slide02() {
   const { c } = useDeck()

@@ -79,6 +79,15 @@
 /* Presentation-grade light surfaces are intentionally not offered:
    the deck is designed and QA'd in dark mode only. */
 
+@media (max-width: 820px) {
+  :root {
+    /* keep every label comfortably readable on a phone */
+    --f-xs: 0.73rem;
+    --f-label: 0.69rem;
+    --f-sm: 0.81rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   :root {
     --t-fast: 1ms;

@@ -545,6 +545,19 @@
   height: 0.85rem;
   transform: translateX(-50%);
   background: linear-gradient(180deg, rgba(90, 216, 255, 0.55), rgba(90, 216, 255, 0));
+  transform-origin: top center;
+  animation: linkGrow 420ms var(--ease) 620ms both;
+}
+
+@keyframes linkGrow {
+  from {
+    transform: translateX(-50%) scaleY(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) scaleY(1);
+    opacity: 1;
+  }
 }
 
 .hub__layer {
@@ -2180,5 +2193,9 @@
   .flow__pulse,
   .preloader__bar::after {
     animation: none !important;
+  }
+  .hub__link {
+    animation: none;
+    opacity: 1;
   }
 }
